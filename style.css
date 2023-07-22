@@ -7,6 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
+  height: 320vh;
     background: #1f242d;
     color: #fff;
 }
@@ -14,8 +15,9 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    backdrop-filter: blur(3px);
     width: 100%;
-    padding: 20px 10px;
+    padding: 15px 10px;
     background: transparent;
     justify-content: space-between;
     display: flex;
@@ -24,7 +26,8 @@ header{
 }
 .logo{
     font-size: 25px;
-    color: #fff;
+    color: #D3A57F;
+    text-shadow: 0 0 20px #D3A57F;
     text-decoration: none;
     font-weight: 600;
     cursor: default;
@@ -32,6 +35,7 @@ header{
     animation: slideRight 1s ease forwards;
 
 }
+
 .navbar a {
   display: inline-block;
     font-size: 18px;
@@ -53,11 +57,11 @@ header{
 .home{
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 70px 10% 0;
+  padding: 0px 8% 0;
 }
 
 .multiple-text
@@ -100,6 +104,14 @@ header{
   animation-delay: 1s;
 
 } 
+
+
+.social-media {
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .social-media a{
   display: inline-flex;
   justify-content: center;
@@ -124,13 +136,15 @@ header{
   box-shadow: 0 0 20px #D3A57F;
 }
 .btn{
-  display: inline-block;
+  display: inline-block; 
+  vertical-align: middle;
   padding: 12px 28px;
   background: #D3A57F;
   text-decoration: none;
   border-radius: 40px;
   font-weight: 600;
   font-size: 16px;
+ 
 color: #1f242d;
 box-shadow: 0 0 20px #D3A57F;
 opacity: 0;
@@ -139,13 +153,124 @@ animation-delay: 1s;
 }
 
 .home-img img{
-  max-width: 450px;
+max-width: 550px;
 margin-right: -20px;
+border-radius: 50%;
 opacity: 0;
+
 animation: zoomIn .6s ease forwards , floatImage 4s ease-in-out infinite;
 animation-delay: 1s, 3s;
   
 }
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+}
+
+.projects {
+  text-align: center;
+  padding: 0px 8%;
+  margin-bottom: 0; /* Remove the margin from the bottom of the projects section */
+}
+
+/* Add the following CSS to create the 4-column layout for project cards */
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+}
+
+.projects {
+  text-align: center;
+  padding: 0px 8%;
+  margin-bottom: 0; /* Remove the margin from the bottom of the projects section */
+}
+
+
+
+
+.support{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 15vh;
+  background: transparent;
+  color: #D3A57F;
+  font-size: 16px;
+  text-shadow: 0 0 20px #D3A57F;
+}
+.buycoffe{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+.softwareLanguages {
+  display: flex;
+  justify-content: left;
+  margin-top: 30px;
+}
+
+.softwareLanguages a {
+  margin-left: 8px;
+  animation: slideRight .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+.parent-container {
+  text-align: center; /* Yatayda ortalamak için */
+  /* Diğer stiller */
+}
+
+ .projects-container .grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.projects-container .grid .box{
+  position: relative;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: .5rem;
+}
+
+.projects-container .grid .box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.projects-container .grid .box h3{
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.429);
+  backdrop-filter: blur(.4rem);
+  transition: .2s linear;
+  opacity: 0;
+}
+
+.grid .box h3 span{
+  font-size: 2.5rem;
+  color: white;
+}
+
+.grid .box:hover h3{
+  opacity: 1;
+}
+
+
+
+
+
+
+
 
 @keyframes slideRight{
 0%{
@@ -229,4 +354,35 @@ animation-delay: 1s, 3s;
     
     }
 
-
+    @media screen and (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+      }
+    
+      .navbar.show {
+        height: 200px;
+      }
+    
+      .navbar a {
+        display: block;
+        margin-bottom: 10px;
+      }
+    
+      .navbar .active {
+        color: #fff;
+      }
+    
+      .menu-btn {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+      }
+    }
