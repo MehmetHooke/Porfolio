@@ -59,9 +59,9 @@ header{
   width: 100%;
   height: 130vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0px 8% 0;
+  padding: 0 13% 0;
 }
 
 .multiple-text
@@ -69,6 +69,9 @@ header{
   text-shadow: 0 0 30px #D3A57F;
 }
 
+.home-concent {
+  margin-top: 100px;
+}
 .home-concent h3{
   font-size: 32px;
   font-weight: 700;
@@ -90,7 +93,7 @@ header{
 .home-concent h3 span{
   color:#D3A57F;
   font-weight: 800;
-  margin: -3px 0;
+  margin: 0px 0;
 }
 .home-concent h3:nth-of-type(2){
   margin-bottom: 30px;
@@ -152,15 +155,14 @@ animation: slideTop .5s ease forwards;
 animation-delay: 1s;
 }
 
-.home-img img{
-max-width: 550px;
-margin-right: -20px;
-border-radius: 50%;
-opacity: 0;
-
-animation: zoomIn .6s ease forwards , floatImage 4s ease-in-out infinite;
-animation-delay: 1s, 3s;
-  
+.home-img img {
+  max-width: 70%; /* You can adjust this value to make the image larger or smaller */
+  min-width: 200px; /* Set a minimum width to avoid becoming too small on smaller screens */
+  height: auto;
+  border-radius: 50%;
+  opacity: 0;
+  animation: zoomIn .6s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 1s, 3s;
 }
 
 .projects-container {
@@ -353,36 +355,65 @@ animation-delay: 1s, 3s;
     }
     
     }
+    @media screen and (max-width: 991px) {
+      html {
+        font-size: 55%;
+      }
+      .home-concent p {
+        font-size: 14px;
+        /* Adjust other styles as needed for smaller screens */
+      }
+    
+      /* Adjust other styles as needed for smaller screens */
+    }
+    
+    /* For screens with a maximum width of 768px */
+    @media screen and (max-width: 768px) {
+      .home .home-concent h3 {
+        font-size: 4rem;
+      }
+      .home-concent p {
+        font-size: 12px;
+        /* Adjust other styles as needed for smaller screens */
+      }
 
-    @media screen and (max-width: 600px) {
-      .navbar {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 0;
-        overflow: hidden;
-        transition: all 0.5s ease-in-out;
+    
+      /* Adjust other styles as needed for smaller screens */
+    }
+    
+    /* For screens with a maximum width of 450px */
+    @media screen and (max-width: 450px) {
+      .home .home-concent h3 {
+        font-size: 3rem;
+      }
+      html {
+        font-size: 50%;
+      }
+      .projects-container {
+        font-size: 2rem;
+      }
+
+      .home-concent p {
+        font-size: 10px;
+        /* Adjust other styles as needed for smaller screens */
       }
     
-      .navbar.show {
-        height: 200px;
+      /* Adjust other styles as needed for smaller screens */
+    }
+    
+    /* For screens with a maximum width of 350px */
+    @media screen and (max-width: 350px) {
+      .home .home-content h3 {
+        font-size: 0.4rem;
+      }
+      html {
+        font-size: 40%;
+      }
+
+      .home-concent p {
+        font-size: 8px;
+        /* Adjust other styles as needed for smaller screens */
       }
     
-      .navbar a {
-        display: block;
-        margin-bottom: 10px;
-      }
-    
-      .navbar .active {
-        color: #fff;
-      }
-    
-      .menu-btn {
-        display: block;
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 999;
-      }
+      /* Adjust other styles as needed for smaller screens */
     }
