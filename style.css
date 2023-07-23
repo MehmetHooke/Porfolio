@@ -155,15 +155,7 @@ animation: slideTop .5s ease forwards;
 animation-delay: 1s;
 }
 
-.home-img img {
-  max-width: 70%; /* You can adjust this value to make the image larger or smaller */
-  min-width: 200px; /* Set a minimum width to avoid becoming too small on smaller screens */
-  height: auto;
-  border-radius: 50%;
-  opacity: 0;
-  animation: zoomIn .6s ease forwards, floatImage 4s ease-in-out infinite;
-  animation-delay: 1s, 3s;
-}
+
 
 .projects-container {
   display: flex;
@@ -382,7 +374,12 @@ animation-delay: 1s;
     }
     
     /* For screens with a maximum width of 450px */
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 480px) {
+      
+      .home{
+        padding-top: 100px;
+      }
+      
       .home .home-concent h3 {
         font-size: 3rem;
       }
@@ -404,7 +401,7 @@ animation-delay: 1s;
     /* For screens with a maximum width of 350px */
     @media screen and (max-width: 350px) {
       .home .home-content h3 {
-        font-size: 0.4rem;
+        font-size: 2rem;
       }
       html {
         font-size: 40%;
