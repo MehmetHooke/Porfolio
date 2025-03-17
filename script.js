@@ -1,5 +1,5 @@
 var typed = new Typed(".multiple-text",{
-    strings:["C#","C++","Python","Matlab","HTML","CSS","NodeJS","JavaScript","Git"],
+    strings:["Git","Wrodpress","PowerBI","Kotlin","JavaScript","C#","C++","Python","Matlab","HTML","CSS"],
     typeSpeed:80,
     backSpeed:30,
     backDelay:1000,
